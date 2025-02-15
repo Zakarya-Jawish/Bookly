@@ -11,7 +11,10 @@ class SplashVeiwBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsData.logo),
-        const Text('Read Books For Free..'),
+        const Text(
+          'Read Books For Free..',
+          textAlign: TextAlign.center,
+        ),
       ],
     );
   }
