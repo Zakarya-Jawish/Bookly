@@ -52,7 +52,7 @@ ThemeData darkMode = ThemeData(
       ),
   appBarTheme: AppBarTheme(
     titleSpacing: 20,
-    backgroundColor: Colors.grey.shade900,
+    backgroundColor: kPrimaryColor,
     elevation: 0.0,
     iconTheme: const IconThemeData(color: Colors.white),
     titleTextStyle: const TextStyle(
