@@ -1,3 +1,4 @@
+import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
 
 ThemeData lightMode = ThemeData(
@@ -45,7 +46,7 @@ ThemeData darkMode = ThemeData(
   drawerTheme: DrawerThemeData(
     scrimColor: Colors.grey.shade900,
   ),
-  scaffoldBackgroundColor: Colors.grey.shade900,
+  scaffoldBackgroundColor: kPrimaryColor,
   colorScheme: const ColorScheme.dark(
       // primary: kPrimaryColor,
       ),

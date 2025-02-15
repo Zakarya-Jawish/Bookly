@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/assets.dart';
+import 'package:bookly/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 
 class SplashVeiwBody extends StatelessWidget {
@@ -11,9 +12,10 @@ class SplashVeiwBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsData.logo),
-        const Text(
+        Text(
           'Read Books For Free..',
           textAlign: TextAlign.center,
+          style: context.textTheme.bodyMedium,
         ),
       ],
     );
