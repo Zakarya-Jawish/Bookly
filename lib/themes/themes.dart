@@ -80,35 +80,35 @@ FloatingActionButtonThemeData floatingButtonTheme() {
 
 TextTheme textTheme() {
   return const TextTheme(
-    displayLarge: TextStyle(
-      fontFamily: 'BalooBhaijaan2',
-      fontSize: 40,
-      fontWeight: FontWeight.bold,
-    ),
-    displayMedium: TextStyle(
-      fontFamily: 'BalooBhaijaan2',
-      fontSize: 30,
-      fontWeight: FontWeight.w600,
-    ),
-    displaySmall: TextStyle(
-      fontFamily: 'BalooBhaijaan2',
-      fontSize: 22,
-      fontWeight: FontWeight.w600,
-    ),
-    bodyLarge: TextStyle(
-      fontFamily: 'BalooBhaijaan2',
-      fontSize: 25,
-      fontWeight: FontWeight.bold,
-    ),
-    bodyMedium: TextStyle(
-      fontFamily: 'BalooBhaijaan2',
-      fontSize: 20,
-      fontWeight: FontWeight.normal,
-    ),
-    bodySmall: TextStyle(
-      fontFamily: 'BalooBhaijaan2',
-      fontSize: 17,
-      fontWeight: FontWeight.bold,
-    ),
-  );
+      displayLarge: TextStyle(
+        fontFamily: 'BalooBhaijaan2',
+        fontSize: 40,
+        fontWeight: FontWeight.bold,
+      ),
+      displayMedium: TextStyle(
+        fontFamily: 'BalooBhaijaan2',
+        fontSize: 30,
+        fontWeight: FontWeight.w600,
+      ),
+      displaySmall: TextStyle(
+        fontFamily: 'BalooBhaijaan2',
+        fontSize: 22,
+        fontWeight: FontWeight.w600,
+      ),
+      bodyLarge: TextStyle(
+        fontFamily: 'BalooBhaijaan2',
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+      ),
+      bodyMedium: TextStyle(
+        fontFamily: 'BalooBhaijaan2',
+        fontSize: 20,
+        fontWeight: FontWeight.normal,
+      ),
+      bodySmall: TextStyle(
+        fontFamily: 'BalooBhaijaan2',
+        fontSize: 17,
+        // fontWeight: FontWeight.bold,
+        color: Colors.grey,
+      ));
 }

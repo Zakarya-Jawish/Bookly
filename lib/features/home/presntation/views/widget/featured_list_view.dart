@@ -12,7 +12,9 @@ class FeaturedBooksListView extends StatelessWidget {
       height: context.height * 0.24,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const FeaturedBookItem(),
+        itemBuilder: (context, index) => const FeaturedBookItem(
+          height: 0.17,
+        ),
         itemCount: 5,
       ),
     );

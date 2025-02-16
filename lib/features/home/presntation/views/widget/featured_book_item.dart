@@ -3,12 +3,12 @@ import 'package:bookly/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBookItem extends StatelessWidget {
-  const FeaturedBookItem({super.key});
-
+  const FeaturedBookItem({super.key, required this.height});
+  final double height;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: context.height * 0.17,
+      width: context.height * height,
       child: AspectRatio(
         aspectRatio: 1 / 1.5,
         child: Container(
