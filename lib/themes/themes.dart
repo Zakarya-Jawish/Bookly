@@ -50,12 +50,12 @@ ThemeData darkMode = ThemeData(
   colorScheme: const ColorScheme.dark(
       // primary: kPrimaryColor,
       ),
-  appBarTheme: AppBarTheme(
+  appBarTheme: const AppBarTheme(
     titleSpacing: 20,
     backgroundColor: kPrimaryColor,
     elevation: 0.0,
-    iconTheme: const IconThemeData(color: Colors.white),
-    titleTextStyle: const TextStyle(
+    iconTheme: IconThemeData(color: Colors.white),
+    titleTextStyle: TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.bold,
       fontSize: 20,
@@ -79,8 +79,8 @@ FloatingActionButtonThemeData floatingButtonTheme() {
 }
 
 TextTheme textTheme() {
-  return TextTheme(
-    displayLarge: const TextStyle(
+  return const TextTheme(
+    displayLarge: TextStyle(
       fontFamily: 'BalooBhaijaan2',
       fontSize: 40,
       fontWeight: FontWeight.bold,
@@ -99,7 +99,7 @@ TextTheme textTheme() {
       fontFamily: 'BalooBhaijaan2',
       fontSize: 25,
     ),
-    bodyMedium: const TextStyle(
+    bodyMedium: TextStyle(
       fontFamily: 'BalooBhaijaan2',
       fontSize: 20,
       fontWeight: FontWeight.normal,

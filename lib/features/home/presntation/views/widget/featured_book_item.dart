@@ -13,7 +13,7 @@ class FeaturedBookItem extends StatelessWidget {
         aspectRatio: 1 / 1.5,
         child: Container(
           decoration: BoxDecoration(
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: AssetImage(AssetsData.testImage),
               ),
               borderRadius: BorderRadius.circular(17)),
