@@ -98,6 +98,7 @@ TextTheme textTheme() {
     bodyLarge: TextStyle(
       fontFamily: 'BalooBhaijaan2',
       fontSize: 25,
+      fontWeight: FontWeight.bold,
     ),
     bodyMedium: TextStyle(
       fontFamily: 'BalooBhaijaan2',
