@@ -17,8 +17,9 @@ class BestSellarListItem extends StatelessWidget {
           children: [
             Text(
               'Harry Potter and the\n Goblet of Fire',
-              style: context.textTheme.bodyLarge!
-                  .copyWith(fontWeight: FontWeight.normal),
+              style: context.textTheme.bodyLarge!.copyWith(
+                  fontWeight: FontWeight.normal,
+                  fontFamily: 'GT Sectra Fine Regular'),
             ),
             Text(
               'J.K Rowling',
