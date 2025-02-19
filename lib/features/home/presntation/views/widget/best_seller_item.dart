@@ -1,7 +1,9 @@
-import 'package:bookly/constants.dart';
-import 'package:bookly/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 
+import 'package:bookly/constants.dart';
+import 'package:bookly/extensions/context_ex.dart';
+
+import 'book_rating.dart';
 import 'featured_book_item.dart';
 
 class BestSellarListItem extends StatelessWidget {
@@ -33,7 +35,6 @@ class BestSellarListItem extends StatelessWidget {
             SizedBox(
               width: 250,
               child: Row(
-                spacing: 5,
                 children: [
                   Text(
                     '19.99\$',
@@ -41,15 +42,7 @@ class BestSellarListItem extends StatelessWidget {
                         .copyWith(fontWeight: FontWeight.normal),
                   ),
                   const Spacer(),
-                  const Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-                  const Text('4.8'),
-                  Text(
-                    '(2939)',
-                    style: context.textTheme.bodySmall,
-                  )
+                  const BookRating(),
                 ],
               ),
             )
