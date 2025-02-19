@@ -1,3 +1,4 @@
+import 'package:bookly/constants.dart';
 import 'package:bookly/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 
@@ -15,11 +16,15 @@ class BestSellarListItem extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Harry Potter and the\n Goblet of Fire',
-              style: context.textTheme.bodyLarge!.copyWith(
-                  fontWeight: FontWeight.normal,
-                  fontFamily: 'GT Sectra Fine Regular'),
+            SizedBox(
+              width: context.width * .5,
+              child: Text(
+                'Harry Potter and the Goblet of Fire ',
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: context.textTheme.bodyLarge!.copyWith(
+                    fontWeight: FontWeight.normal, fontFamily: kGTSectraFont),
+              ),
             ),
             Text(
               'J.K Rowling',
