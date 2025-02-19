@@ -11,42 +11,45 @@ class BestSellarListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(context.width);
     return Row(
       children: [
         const FeaturedBookItem(height: 0.10),
         const SizedBox(width: 30),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              width: context.width * .5,
-              child: Text(
-                'Harry Potter and the Goblet of Fire ',
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: context.textTheme.bodyLarge!.copyWith(
-                    fontWeight: FontWeight.normal, fontFamily: kGTSectraFont),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: context.width * .6,
+                child: Text(
+                  'Harry Potter and the Goblet of Fire ',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: context.textTheme.bodyLarge!.copyWith(
+                      fontWeight: FontWeight.normal, fontFamily: kGTSectraFont),
+                ),
               ),
-            ),
-            Text(
-              'J.K Rowling',
-              style: context.textTheme.bodySmall,
-            ),
-            SizedBox(
-              width: 250,
-              child: Row(
-                children: [
-                  Text(
-                    '19.99\$',
-                    style: context.textTheme.bodyLarge!
-                        .copyWith(fontWeight: FontWeight.normal),
-                  ),
-                  const Spacer(),
-                  const BookRating(),
-                ],
+              Text(
+                'J.K Rowling',
+                style: context.textTheme.bodySmall,
               ),
-            )
-          ],
+              SizedBox(
+                width: 250,
+                child: Row(
+                  children: [
+                    Text(
+                      '19.99\$',
+                      style: context.textTheme.bodyLarge!
+                          .copyWith(fontWeight: FontWeight.normal),
+                    ),
+                    const Spacer(),
+                    const BookRating(),
+                  ],
+                ),
+              )
+            ],
+          ),
         )
       ],
     );
