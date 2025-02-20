@@ -23,9 +23,12 @@ class BookDetailsViewBody extends StatelessWidget {
           style:
               context.textTheme.bodyLarge!.copyWith(fontFamily: kGTSectraFont),
         ),
-        Text(
-          'J.K Rowling',
-          style: context.textTheme.bodyMedium!.copyWith(color: Colors.grey),
+        Opacity(
+          opacity: .8,
+          child: Text(
+            'J.K Rowling',
+            style: context.textTheme.bodyMedium!.copyWith(color: Colors.grey),
+          ),
         ),
         const SizedBox(height: 10),
         const BookRating(),
