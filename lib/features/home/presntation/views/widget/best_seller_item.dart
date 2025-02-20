@@ -6,7 +6,7 @@ import 'package:bookly/extensions/context_ex.dart';
 import 'package:go_router/go_router.dart';
 
 import 'book_rating.dart';
-import 'featured_book_item.dart';
+import 'custom_book_image.dart';
 
 class BestSellarListItem extends StatelessWidget {
   const BestSellarListItem({super.key});
@@ -19,7 +19,7 @@ class BestSellarListItem extends StatelessWidget {
       },
       child: Row(
         children: [
-          const FeaturedBookItem(height: 0.10),
+          const CustomBookImage(height: 0.10),
           const SizedBox(width: 30),
           Expanded(
             child: Column(

@@ -2,8 +2,8 @@ import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 
-class FeaturedBookItem extends StatelessWidget {
-  const FeaturedBookItem({super.key, required this.height});
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({super.key, required this.height});
   final double height;
   @override
   Widget build(BuildContext context) {
