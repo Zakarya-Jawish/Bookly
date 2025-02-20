@@ -30,6 +30,7 @@ class HomeViewBody extends StatelessWidget {
                   style: context.textTheme.bodyLarge,
                 ),
               ),
+              const SizedBox(height: 5),
             ],
           ),
         ),

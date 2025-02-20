@@ -19,7 +19,7 @@ class BestSellarListItem extends StatelessWidget {
       },
       child: Row(
         children: [
-          const CustomBookImage(height: 0.10),
+          const CustomBookImage(width: 0.22),
           const SizedBox(width: 30),
           Expanded(
             child: Column(

@@ -11,7 +11,7 @@ class BookDetailsViewBody extends StatelessWidget {
     return const Column(
       children: [
         CustomAppBarDetils(),
-        CustomBookImage(height: 0.22),
+        CustomBookImage(width: 0.1),
       ],
     );
   }
