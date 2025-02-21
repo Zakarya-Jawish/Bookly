@@ -37,7 +37,13 @@ ThemeData lightMode = ThemeData(
 ThemeData darkMode = ThemeData(
   inputDecorationTheme: InputDecorationTheme(
     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(15),
+      borderSide: const BorderSide(
+        color: Colors.white,
+      ),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15),
       borderSide: const BorderSide(
         color: Colors.white,
       ),
