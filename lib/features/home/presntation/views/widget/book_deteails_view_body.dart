@@ -13,45 +13,57 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const CustomAppBarDetils(),
-          const SizedBox(height: 25),
-          const CustomBookImage(width: 0.45),
-          const SizedBox(height: 20),
-          Text(
-            'Harry Potter and the Goblet of Fire',
-            textAlign: TextAlign.center,
-            style: context.textTheme.bodyLarge!
-                .copyWith(fontFamily: kGTSectraFont),
-          ),
-          Opacity(
-            opacity: .8,
-            child: Text(
-              'J.K Rowling',
-              style: context.textTheme.bodyMedium!.copyWith(color: Colors.grey),
-            ),
-          ),
-          const SizedBox(height: 10),
-          const BookRating(),
-          const SizedBox(height: 30),
-          const BoxAction(),
-          const SizedBox(height: 30),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'You can also like',
-              style: context.textTheme.bodyMedium!.copyWith(
-                fontWeight: FontWeight.bold,
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: SizedBox(
+            height: context.height - 40,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const CustomAppBarDetils(),
+                  const SizedBox(height: 25),
+                  const CustomBookImage(width: 0.45),
+                  const SizedBox(height: 20),
+                  Text(
+                    'Harry Potter and the Goblet of Fire',
+                    textAlign: TextAlign.center,
+                    style: context.textTheme.bodyLarge!
+                        .copyWith(fontFamily: kGTSectraFont),
+                  ),
+                  Opacity(
+                    opacity: .8,
+                    child: Text(
+                      'J.K Rowling',
+                      style: context.textTheme.bodyMedium!
+                          .copyWith(color: Colors.grey),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const BookRating(),
+                  const SizedBox(height: 30),
+                  const BoxAction(),
+                  const Expanded(child: SizedBox(height: 30)),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'You can also like',
+                      style: context.textTheme.bodyMedium!.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  const SimilerBookListView(),
+                  const SizedBox(height: 30),
+                ],
               ),
             ),
           ),
-          const SimilerBookListView()
-        ],
-      ),
+        )
+      ],
     );
   }
 }
