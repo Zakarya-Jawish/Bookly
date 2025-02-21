@@ -1,7 +1,7 @@
 import 'package:bookly/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 
-import 'custom_book_image.dart';
+import '../../../../../core/widget/custom_book_image.dart';
 
 class SimilerBookListView extends StatelessWidget {
   const SimilerBookListView({super.key});

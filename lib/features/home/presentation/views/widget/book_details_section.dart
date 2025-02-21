@@ -2,9 +2,9 @@ import 'package:bookly/constants.dart';
 import 'package:bookly/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 
-import 'book_rating.dart';
+import '../../../../../core/widget/book_rating.dart';
 import 'boox_action.dart';
-import 'custom_book_image.dart';
+import '../../../../../core/widget/custom_book_image.dart';
 
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key});

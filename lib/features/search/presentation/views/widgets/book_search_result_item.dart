@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/app_router.dart';
+import 'package:bookly/core/widget/custom_book_image.dart' show CustomBookImage;
 import 'package:flutter/material.dart';
 
 import 'package:bookly/constants.dart';
@@ -6,10 +7,9 @@ import 'package:bookly/extensions/context_ex.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/widget/book_rating.dart';
-import '../../../../../core/widget/custom_book_image.dart';
 
-class BestSellarListItem extends StatelessWidget {
-  const BestSellarListItem({super.key});
+class SearchResultItem extends StatelessWidget {
+  const SearchResultItem({super.key});
 
   @override
   Widget build(BuildContext context) {
