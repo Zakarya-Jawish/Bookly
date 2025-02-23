@@ -1,8 +1,10 @@
 import 'package:bookly/core/utils/app_router.dart';
+import 'package:bookly/core/utils/service_locater.dart';
 import 'package:bookly/core/utils/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const BooklyApp());
 }
 
