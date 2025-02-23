@@ -19,7 +19,11 @@ class SearchResultItem extends StatelessWidget {
       },
       child: Row(
         children: [
-          const CustomBookImage(width: 0.22),
+          const CustomBookImage(
+            width: 0.22,
+            urlImage:
+                'http://books.google.com/books/content?id=1sIzdipoXuQC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71ttb9F7gjEgWYTa-izBj7KghEFO2dKFV9EcfAeHd8uW6eyrQxpyARTxJGtfXQEopf2H4RldbJV0qTnhzGma1o_jrPJdPWzR2cmTm7E0aNshuP9bpPJA2G8aNfeuNxNDKScxJoP&source=gbs_api',
+          ),
           const SizedBox(width: 30),
           Expanded(
             child: Column(
