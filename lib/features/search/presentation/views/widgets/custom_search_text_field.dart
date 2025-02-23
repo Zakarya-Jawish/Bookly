@@ -1,4 +1,4 @@
-import 'package:bookly/extensions/context_ex.dart';
+import 'package:bookly/core/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

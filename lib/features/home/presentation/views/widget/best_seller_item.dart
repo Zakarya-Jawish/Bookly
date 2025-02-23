@@ -2,7 +2,7 @@ import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bookly/constants.dart';
-import 'package:bookly/extensions/context_ex.dart';
+import 'package:bookly/core/extensions/context_ex.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/widget/book_rating.dart';

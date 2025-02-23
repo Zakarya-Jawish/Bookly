@@ -1,4 +1,4 @@
-import 'package:bookly/extensions/context_ex.dart';
+import 'package:bookly/core/extensions/context_ex.dart';
 import 'package:bookly/features/home/presentation/views/widget/custom_appbar.dart';
 import 'package:flutter/material.dart';
 

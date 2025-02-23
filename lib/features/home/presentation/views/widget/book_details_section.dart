@@ -1,5 +1,5 @@
 import 'package:bookly/constants.dart';
-import 'package:bookly/extensions/context_ex.dart';
+import 'package:bookly/core/extensions/context_ex.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widget/book_rating.dart';
