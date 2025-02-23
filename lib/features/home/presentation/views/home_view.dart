@@ -15,11 +15,15 @@ class HomeView extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-            create: (context) =>
-                FeaturedBooksCubit(getIt.get<HomeRepoImplemnts>())),
+          create: (context) => FeaturedBooksCubit(
+            getIt.get<HomeRepoImplemnts>(),
+          )..fetchFeaturedBooks(),
+        ),
         BlocProvider(
-            create: (context) =>
-                NewsetBookCubit(getIt.get<HomeRepoImplemnts>())),
+          create: (context) => NewsetBookCubit(
+            getIt.get<HomeRepoImplemnts>(),
+          )..fetchNewsetBooks(),
+        ),
       ],
       child: const SafeArea(
         child: Scaffold(

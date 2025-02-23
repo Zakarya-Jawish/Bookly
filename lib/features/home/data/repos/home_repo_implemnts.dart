@@ -31,13 +31,13 @@ class HomeRepoImplemnts implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fectchFeaturedBooks() async {
     try {
       var data = await apiService.get(
-          endPoint: 'volumes?Filtering=free-ebooks &q=subject:Programing');
+          endPoint: 'volumes?q=subject:programming&Filtering=free-ebooks');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
       }
       return right(books);
-    } on Exception catch (e) {
+    } catch (e) {
       if (e is DioException) {
         return left(FailureServer.fromDioError(e));
       }
