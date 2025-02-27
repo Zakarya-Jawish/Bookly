@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/app_router.dart';
+import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bookly/constants.dart';
@@ -9,8 +10,8 @@ import '../../../../../core/widget/book_rating.dart';
 import '../../../../../core/widget/custom_book_image.dart';
 
 class BestSellarListItem extends StatelessWidget {
-  const BestSellarListItem({super.key});
-
+  const BestSellarListItem({super.key, required this.bookModel});
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -19,10 +20,9 @@ class BestSellarListItem extends StatelessWidget {
       },
       child: Row(
         children: [
-          const CustomBookImage(
+          CustomBookImage(
             width: 0.22,
-            urlImage:
-                'http://books.google.com/books/content?id=1sIzdipoXuQC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71ttb9F7gjEgWYTa-izBj7KghEFO2dKFV9EcfAeHd8uW6eyrQxpyARTxJGtfXQEopf2H4RldbJV0qTnhzGma1o_jrPJdPWzR2cmTm7E0aNshuP9bpPJA2G8aNfeuNxNDKScxJoP&source=gbs_api',
+            urlImage: bookModel.volumeInfo.imageLinks.thumbnail!,
           ),
           const SizedBox(width: 30),
           Expanded(
@@ -32,7 +32,7 @@ class BestSellarListItem extends StatelessWidget {
                 SizedBox(
                   width: context.width * .6,
                   child: Text(
-                    'Harry Potter and the Goblet of Fire ',
+                    bookModel.volumeInfo.title!,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: context.textTheme.bodyLarge!.copyWith(
@@ -41,7 +41,7 @@ class BestSellarListItem extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'J.K Rowling',
+                  bookModel.volumeInfo.authors![0],
                   style: context.textTheme.bodySmall,
                 ),
                 SizedBox(
@@ -49,12 +49,15 @@ class BestSellarListItem extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        '19.99\$',
+                        'Free',
                         style: context.textTheme.bodyLarge!
                             .copyWith(fontWeight: FontWeight.normal),
                       ),
                       const Spacer(),
-                      const BookRating(),
+                      const BookRating(
+                        ratting: 4.5,
+                        count: 9092,
+                      ),
                     ],
                   ),
                 )
