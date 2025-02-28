@@ -3,6 +3,7 @@ import 'package:bookly/features/home/presentation/manger/newset_book_cubit/newse
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/widget/custom_error_widget.dart';
 import 'best_seller_item.dart';
 
 class BestSellerListView extends StatelessWidget {
@@ -26,7 +27,7 @@ class BestSellerListView extends StatelessWidget {
             ),
           );
         } else if (state is NewsetBookFailureState) {
-          return ErrorWidget(state.errMessage);
+          return CustomErrorWidget(errMessage: state.errMessage);
         } else {
           return const CustomCircleIndicator();
         }
