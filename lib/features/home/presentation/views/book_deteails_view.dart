@@ -20,7 +20,9 @@ class BookDetailsView extends StatelessWidget {
         body: BlocProvider(
           create: (context) => SimilerBookCubit(getIt.get<HomeRepoImplemnts>())
             ..fetchSimilerBooks(category: bookModel.volumeInfo.categories![0]),
-          child: const BookDetailsViewBody(),
+          child: BookDetailsViewBody(
+            bookModel: bookModel,
+          ),
         ),
       ),
     );
