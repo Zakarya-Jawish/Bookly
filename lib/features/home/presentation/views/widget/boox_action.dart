@@ -20,7 +20,7 @@ class BoxAction extends StatelessWidget {
               width: context.width * 0.4,
               child: const CustomButton(
                 color: Colors.white,
-                text: '9.99\$',
+                text: 'Free',
                 colorText: Colors.black,
               ),
             ),
