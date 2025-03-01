@@ -10,6 +10,7 @@ class SimilerBooksSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      spacing: 15,
       children: [
         Text(
           'You can also like',
