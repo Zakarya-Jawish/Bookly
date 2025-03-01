@@ -6,4 +6,6 @@ abstract class HomeRepo {
   // right side to success
   Future<Either<Failure, List<BookModel>>> fectchNewsetBooks();
   Future<Either<Failure, List<BookModel>>> fectchFeaturedBooks();
+  Future<Either<Failure, List<BookModel>>> fectchSimilarBooks(
+      {required String category});
 }
