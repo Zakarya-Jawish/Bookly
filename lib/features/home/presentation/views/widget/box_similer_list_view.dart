@@ -20,8 +20,8 @@ class SimilerBookListView extends StatelessWidget {
             return ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 7,
-              itemBuilder: (context, index) => SizedBox(
-                width: 7,
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 7.0),
                 child: CustomBookImage(
                   width: 0.2,
                   urlImage: state.books[index].volumeInfo.imageLinks.thumbnail!,
