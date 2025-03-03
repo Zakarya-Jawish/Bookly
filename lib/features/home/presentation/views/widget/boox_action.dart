@@ -1,7 +1,7 @@
 import 'package:bookly/core/extensions/context_ex.dart';
+import 'package:bookly/core/functions/url_luncher.dart';
 import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'custom_button.dart';
 
@@ -25,10 +25,8 @@ class BoxAction extends StatelessWidget {
                 text: 'Download',
                 colorText: Colors.black,
                 function: () async {
-                  Uri url = Uri.parse(bookModel.accessInfo!.webReaderLink!);
-                  if (!await launchUrl(url)) {
-                    throw Exception('Could not launch $url');
-                  }
+                  await lanchCustomUrl(
+                      context, bookModel.accessInfo!.webReaderLink!);
                 },
               ),
             ),
@@ -40,10 +38,8 @@ class BoxAction extends StatelessWidget {
                 text: 'Preview',
                 colorText: Colors.white,
                 function: () async {
-                  Uri url = Uri.parse(bookModel.volumeInfo.previewLink!);
-                  if (!await launchUrl(url)) {
-                    throw Exception('Could not launch $url');
-                  }
+                  await lanchCustomUrl(
+                      context, bookModel.volumeInfo.previewLink!);
                 },
               ),
             ),
