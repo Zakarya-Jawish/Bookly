@@ -18,6 +18,7 @@ class _CustomSearchTextFieldState extends State<CustomSearchTextField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      style: context.textTheme.bodyMedium,
       controller: widget.textEditingController,
       decoration: InputDecoration(
         hintText: 'Search',
