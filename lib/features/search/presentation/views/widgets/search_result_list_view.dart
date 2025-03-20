@@ -13,9 +13,13 @@ class SearchResultListView extends StatelessWidget {
     return BlocBuilder<SearchResultCubit, SearchResultState>(
       builder: (context, state) {
         if (state is SearchResultSuccessState) {
-          return ListView.separated(
-            itemBuilder: (context, index) => const SearchResultItem(),
-            separatorBuilder: (context, index) => const SizedBox(height: 20),
+          return ListView.builder(
+            itemBuilder: (context, index) => Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
+              child: SearchResultItem(
+                bookModel: state.books[index],
+              ),
+            ),
             itemCount: state.books.length,
           );
         } else if (state is SearchResultLoadingState) {

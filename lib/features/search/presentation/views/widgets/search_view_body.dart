@@ -1,5 +1,7 @@
+import 'package:bookly/features/search/presentation/manger/search_result_cubit/search_result_cubit.dart';
 import 'package:bookly/features/search/presentation/views/widgets/search_result_list_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'custom_search_text_field.dart';
 
@@ -23,7 +25,10 @@ class _SearchViewBodyState extends State<SearchViewBody> {
           const SizedBox(height: 30),
           CustomSearchTextField(
             textEditingController: textEditingController,
-            onPressed: () {},
+            onPressed: () async {
+              await BlocProvider.of<SearchResultCubit>(context)
+                  .fetechSearchResult(subject: textEditingController.text);
+            },
           ),
           const SizedBox(height: 20),
           const Text('Search result:'),
