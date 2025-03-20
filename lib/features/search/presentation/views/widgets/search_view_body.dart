@@ -3,24 +3,40 @@ import 'package:flutter/material.dart';
 
 import 'custom_search_text_field.dart';
 
-class SearchViewBody extends StatelessWidget {
+class SearchViewBody extends StatefulWidget {
   const SearchViewBody({super.key});
 
   @override
+  State<SearchViewBody> createState() => _SearchViewBodyState();
+}
+
+class _SearchViewBodyState extends State<SearchViewBody> {
+  final TextEditingController textEditingController = TextEditingController();
+
+  @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.0),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 30),
-          CustomSearchTextField(),
-          SizedBox(height: 20),
-          Text('Search result:'),
-          SizedBox(height: 20),
-          Expanded(child: SearchResultListView()),
+          const SizedBox(height: 30),
+          CustomSearchTextField(
+            textEditingController: textEditingController,
+            onPressed: () {},
+          ),
+          const SizedBox(height: 20),
+          const Text('Search result:'),
+          const SizedBox(height: 20),
+          const Expanded(child: SearchResultListView()),
         ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    textEditingController.dispose();
   }
 }
