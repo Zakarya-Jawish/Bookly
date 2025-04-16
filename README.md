@@ -1,16 +1,25 @@
-# bookly
+# 📚 Bookly
 
-A new Flutter project.
+A Flutter application that displays a collection of free books from the Google Books API in a clean and user-friendly interface. The app is built using the **MVVM architecture** and uses **Cubit** for state management, ensuring clean, scalable, and maintainable code.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- 🔍 Search for free books from Google
+- 📖 View book details (title, cover image, authors, description, etc.)
+- 🧭 Simple and elegant Flutter UI
+- ⚙️ State management using Cubit (Bloc)
+- 🧱 Clean MVVM structure (Model - View - ViewModel)
+- 🌙 Dark mode
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Technologies Used
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter 💙
+- Dart
+- Google Books API
+- flutter_bloc (Cubit)
+- Dio (for HTTP requests)
+- Get_it package (for dependency injection)
+- Cached Network Image (for efficient image loading)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
