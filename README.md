@@ -23,4 +23,5 @@ A Flutter application that displays a collection of free books from the Google B
 
 ## 📱 Screenshots
 
-
+![splash](assets/screenshots/splash.png)
+<img src="assets/screenshots/splash.png" width="128"/>
